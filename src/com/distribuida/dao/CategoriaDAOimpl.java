@@ -53,7 +53,7 @@ public class CategoriaDAOimpl implements CategoriaDAO {
 		// TODO Auto-generated method stub
 		
 		Session session =sessionFactory.getCurrentSession();
-		Query query =session.createQuery("UPDATE Categoria SET categoria =:categoria "
+		Query query =session.createQuery("UPDATE Categoria SET categoria =:categoria, "
 				+ " descripcion =:descripcion "
 				+ " WHERE idCategoria =:idCategoria "
 				);
