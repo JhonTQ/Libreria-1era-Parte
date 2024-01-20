@@ -53,7 +53,7 @@ public class CategoriaDAOimpl implements CategoriaDAO {
 		// TODO Auto-generated method stub
 		
 		Session session =sessionFactory.getCurrentSession();
-		Query query =session.createQuery("UPDATE Categoria SET categoria =:categoria, "
+		Query query =session.createQuery("UPDATE Categoria SET categoria =:categoria "
 				+ " descripcion =:descripcion "
 				+ " WHERE idCategoria =:idCategoria "
 				);
@@ -75,13 +75,14 @@ public class CategoriaDAOimpl implements CategoriaDAO {
 	query.executeUpdate();
 
 	}
+	
 	@Transactional
 	public List<Categoria> findAll(String busqueda) {
 		// TODO Auto-generated method stub
 		Session session =sessionFactory.getCurrentSession();
-		Query<Categoria> query = session.createQuery("SELECT au FROM  Categoria au, "
-				+ ", WHERE au.categoria LIKE : busqueda"
-				+ "OR au.descripcion LIKE : busqueda"
+		Query<Categoria> query = session.createQuery("SELECT au FROM  Categoria au "
+				+ " WHERE au.categoria LIKE : busqueda"
+				+ " OR au.descripcion LIKE : busqueda"
 				, Categoria.class);
 		
 		query.setParameter("busqueda","%"+busqueda+"%");

@@ -21,7 +21,7 @@ public class PrincipalCategoria {
 		
 		//ADD
 				Categoria categoria= new Categoria (0, "categoria1", "libro de prueba");
-				//categoriaDAO.add(categoria);
+				categoriaDAO.add(categoria);
 				
 				
 		//////////UP
@@ -48,7 +48,7 @@ public class PrincipalCategoria {
 				//System.out.println(categoria1.toString());
 					
 				
-				List<Categoria> categorias2 = categoriaDAO.findAll("pam");
+				List<Categoria> categorias2 = categoriaDAO.findAll("chile");
 				for(Categoria categoria3: categorias2) {
 					System.out.println(categoria3.toString());	
 				}
