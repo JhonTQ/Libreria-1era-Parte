@@ -1,4 +1,4 @@
-package com.distribuida.principal;
+package com.distribuida.principalDTO;
 
 import java.util.List;
 
