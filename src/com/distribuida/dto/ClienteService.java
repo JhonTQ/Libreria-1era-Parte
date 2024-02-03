@@ -15,5 +15,8 @@ public interface ClienteService {
 	public void up(Cliente cliente);
 	
 	public void del(int id);
+	
+	public void add(int idCliente, String cedula, String nombre, String apellido, String direccion, String telefono, String correo);
+	public void up(int idCliente, String cedula, String nombre, String apellido, String direccion, String telefono, String correo);
 
 }

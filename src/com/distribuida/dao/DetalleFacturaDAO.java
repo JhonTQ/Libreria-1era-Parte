@@ -10,9 +10,9 @@ public interface DetalleFacturaDAO {
 
 	public DetalleFactura findOne (int id);
 	
-	public void add(DetalleFactura factura);
+	public void add(DetalleFactura detallefactura);
 	
-	public void up(DetalleFactura factura);
+	public void up(DetalleFactura detallefactura);
 	
 	public void del(int id);
 	

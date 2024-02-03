@@ -72,7 +72,7 @@ public class Libro {
 
 	public Libro(int idLibro, String titulo, String editorial, int numPaginas, String edicion, String idioma,
 			Date fechaPublicacion, String descripcion, String tipoPasta, String iSBN, String numEjemplares,
-			String portada, String presentacion, Double precio, Categoria categoria, Autor autor) {
+			String portada, String presentacion, Double precio) {
 		this.idLibro = idLibro;
 		this.titulo = titulo;
 		this.editorial = editorial;
@@ -87,8 +87,7 @@ public class Libro {
 		this.portada = portada;
 		this.presentacion = presentacion;
 		this.precio = precio;
-		this.categoria = categoria;
-		this.autor = autor;
+		
 	}
 
 

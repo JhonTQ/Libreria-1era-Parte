@@ -32,6 +32,7 @@ public class PrincipalAutor {
 		
 		//autorDAO.del(55);
 		
+		
 		//findAll
 			
 		List<Autor> autores = autorDAO.findAll();

@@ -45,5 +45,21 @@ public class ClienteServiceImpl implements ClienteService {
 		clienteDAO.del(id);
 
 	}
+	
+	public void add(int idCliente, String cedula, String nombre, String apellido, String direccion, String telefono, String correo) {
+		
+		
+	Cliente cliente=new Cliente(idCliente,cedula,nombre,apellido,direccion,telefono,correo);	
+	clienteDAO.add(cliente);
+	
+	}
+	
+	public void up(int idCliente, String cedula, String nombre, String apellido, String direccion, String telefono, String correo) {
+		
+		
+		Cliente cliente=new Cliente(idCliente,cedula,nombre,apellido,direccion,telefono,correo);	
+		clienteDAO.up(cliente);
+		
+	}
 
 }

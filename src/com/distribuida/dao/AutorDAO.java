@@ -14,5 +14,10 @@ public interface AutorDAO {
 	
 	public List<Autor> findAll(String busqueda);
 	
+	public void add(int i, String string, String string2, String string3, String string4, String string5,
+			String string6);
+	public void up(int i, String string, String string2, String string3, String string4, String string5,
+			String string6);
+	
 
 }

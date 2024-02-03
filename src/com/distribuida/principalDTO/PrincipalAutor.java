@@ -3,7 +3,7 @@ import java.util.List;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.distribuida.dao.AutorDAO;
+import com.distribuida.dto.AutorService;
 import com.distribuida.entities.Autor;
 import com.distribuida.entities.Categoria;
 
@@ -14,27 +14,29 @@ public class PrincipalAutor {
 		
 		ClassPathXmlApplicationContext context =new ClassPathXmlApplicationContext("ApplicationContext.xml");
 		
-		AutorDAO autorDAO=context.getBean("autorDAOimpl", AutorDAO.class);
+		AutorService autorService=context.getBean("autorServiceImpl", AutorService.class);
 		
 		//CRUD
 		
 		//ADD
-		Autor autor = new Autor (0, "nombre1", "apellido1", "pais1", "direccion1", "telefono1", "correo1");
-		//autorDAO.add(autor);
+		
+		autorService.add(0, "Diego", "Maiquez", "Ecuador", "Tumbaco", "telefono1", "correo1");
 		
 		//////////UP
 		
-		Autor autor2 = new Autor (56, "nombre2", "apellido2", "pais2", "direccion2", "telefono2", "correo2");
-		autorDAO.up(autor2);
+	
+		//autorService.up(56, "nombre8", "apellido8", "pais8", "direccion2", "telefono2", "correo2");
 		
 		
 		//////////////DEL
 		
-		//autorDAO.del(55);
+		//autorDAO.del(57);
+		try {
+			System.out.println(">>>>DEL>>>>>"+autorService.findOne(56));}catch(Exception e) {e.printStackTrace();}
 		
 		//findAll
 			
-		List<Autor> autores = autorDAO.findAll();
+		List<Autor> autores = autorService.findAll();
 		
 		for (Autor item : autores) {
 			System.out.println(item.toString());
@@ -43,7 +45,7 @@ public class PrincipalAutor {
 			
 		///////findOne
 		
-		//Autor autor = autorDAO.findOne(1);
+		//Autor autor = autorService.findOne(1);
 		//System.out.println(autor.toString());
 		
 		

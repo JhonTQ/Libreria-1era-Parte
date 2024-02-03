@@ -1,6 +1,7 @@
 package com.distribuida.entities;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -23,7 +24,7 @@ public class DetalleFactura {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id_factura_detalle")
-	private int idaDetalleFactura;
+	private int idDetalleFactura;
 	@Column(name="cantidad")
 	private int cantidad;
 	@Column(name="subtotal")
@@ -43,12 +44,11 @@ public class DetalleFactura {
 	
 	
 	
-		public DetalleFactura(int idaDetalleFactura, int cantidad, Double subTotal, Factura factura, Libro libro) {
-		this.idaDetalleFactura = idaDetalleFactura;
+		public DetalleFactura(int idDetalleFactura, int cantidad, Double subTotal ) {
+		this.idDetalleFactura = idDetalleFactura;
 		this.cantidad = cantidad;
 		this.subTotal = subTotal;
-		this.factura = factura;
-		this.libro = libro;
+	
 	}
 
 
@@ -58,11 +58,11 @@ public class DetalleFactura {
 
 
 	public int getIdaDetalleFactura() {
-		return idaDetalleFactura;
+		return idDetalleFactura;
 	}
 
 	public void setIdaDetalleFactura(int idaDetalleFactura) {
-		this.idaDetalleFactura = idaDetalleFactura;
+		this.idDetalleFactura = idaDetalleFactura;
 	}
 
 	public int getCantidad() {
@@ -98,11 +98,36 @@ public class DetalleFactura {
 	}
 
 	public String toString() {
-		return "DetalleFactura [idaDetalleFactura=" + idaDetalleFactura + ", cantidad=" + cantidad + ", subTotal="
-				+ subTotal + ", factura=" + factura + ", libro=" + libro + "]";
+		return "DetalleFactura [idaDetalleFactura=" + idDetalleFactura + ", cantidad=" + cantidad + ", subTotal="
+				+ subTotal + " ]";
+	}
+
+
+
+	public void add(int i, int j, double d, int k, int l) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	public List<DetalleFactura> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+
+		
+
+
+
+	
+		
 	}
 	
 	
 	
 
-}
+

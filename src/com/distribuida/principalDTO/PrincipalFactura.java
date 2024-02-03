@@ -7,6 +7,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.distribuida.dao.ClienteDAO;
 import com.distribuida.dao.FacturaDAO;
+import com.distribuida.dto.ClienteService;
+import com.distribuida.dto.FacturaService;
 import com.distribuida.entities.Autor;
 import com.distribuida.entities.Cliente;
 import com.distribuida.entities.Factura;
@@ -17,29 +19,29 @@ public class PrincipalFactura {
 		// TODO Auto-generated method stub
 		
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ApplicationContext.xml");
-		FacturaDAO facturaDAO =context.getBean("facturaDAOImpl", FacturaDAO.class);
-		ClienteDAO clienteDAO =context.getBean("clienteDAOimpl", ClienteDAO.class);
+		FacturaService facturaService =context.getBean("facturaServiceImpl", FacturaService.class);
+		//ClienteService clienteService =context.getBean("clienteServiceImpl", ClienteService.class);
 		
 		//CRU
 		
 		//ADD
-		Cliente cliente =clienteDAO.findOne(1);
-		Factura factura = new Factura (0, "fac-00090",new Date(), 22.22,2.30,25.23,cliente);
-		//facturaDAO.add(factura);
+	//	Cliente cliente =clienteService.findOne(1);
+		
+		facturaService.add(0, "fac-00099",new Date(), 22.22,2.30,25.23, 1);
 		
 		
 //////////UP
-		Cliente cliente2 =clienteDAO.findOne(2);
-		Factura factura2 = new Factura (86, "fac-00090",new Date(), 23.22,2.33,25.233,cliente2);
-		//facturaDAO.up(factura2);
+		//Cliente cliente2 =clienteService.findOne(2);
+		
+		//facturaService.up(87, "fac-00098",new Date(), 23.22,2.44,25.666 , 1);
 		
 		
 		//BORRADO
-		facturaDAO.del(86);
+		//facturaService.del(86);
 		
 		//FindAll
 		
-		List<Factura> facturas =facturaDAO.findAll();
+		List<Factura> facturas =facturaService.findAll();
 		
 		for (Factura item : facturas) {
 			

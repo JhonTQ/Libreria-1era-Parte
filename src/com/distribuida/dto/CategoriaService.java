@@ -10,13 +10,14 @@ public interface CategoriaService {
 
 	public Categoria findOne (int id);
 	
-	public void add(Categoria categoria);
-	
-	public void up(Categoria categoria);
+	public void add(int idCategoria, String categoria, String descripcion);
+	public void up(int idCategoria, String categoria, String descripcion);
 	
 	public void del(int id);
 
 	
 	public List<Categoria> findAll(String busqueda);
+	
+	
 
 }

@@ -85,6 +85,16 @@ public class AutorDAOimpl implements AutorDAO {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	public void add(int i, String string, String string2, String string3, String string4, String string5,
+			String string6) {
+		// TODO Auto-generated method stub
+		
+	}
+	public void up(int i, String string, String string2, String string3, String string4, String string5,
+			String string6) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 	/*@Transactional

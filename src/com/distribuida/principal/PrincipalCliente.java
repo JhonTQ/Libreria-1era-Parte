@@ -18,14 +18,14 @@ public class PrincipalCliente {
 		
 		
 		//add
-		Cliente cliente2 =new Cliente(0,"0102030405", "Jefferson", "Gutierritos","Quito","0987654321","jgutierritos@correo.com");
+		Cliente cliente2 =new Cliente(0,"01020304059", "Jefferson9", "Gutierritos9","Quito","0987654321","jgutierritos@correo.com");
 		
-		clienteDAO.add(cliente2);
+		//clienteDAO.add(cliente2);
 		
-		Cliente cliente3 =new Cliente(39,"0102032233", "Pamela", "Gutierritos","Quito","0987651234","pgutierritos@correo.com");
+		Cliente cliente3 =new Cliente(45,"0102032233", "Pamela7", "Gutierritos7","Quito","0987651234","pgutierritos@correo.com");
 	//	clienteDAO.up(cliente3);
 		
-		clienteDAO.del(39);
+		clienteDAO.del(46);
 		
 		List<Cliente> clientes =clienteDAO.findAll();
 		

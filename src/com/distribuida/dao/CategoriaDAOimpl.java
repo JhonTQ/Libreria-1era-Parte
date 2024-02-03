@@ -88,5 +88,13 @@ public class CategoriaDAOimpl implements CategoriaDAO {
 		query.setParameter("busqueda","%"+busqueda+"%");
 		return query.getResultList();
 	}
+	public void add(int idCategoria, String categoria, String descripcion) {
+		// TODO Auto-generated method stub
+		
+	}
+	public void up(int idCategoria, String categoria, String descripcion) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

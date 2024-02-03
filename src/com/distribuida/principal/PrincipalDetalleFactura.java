@@ -9,7 +9,7 @@ import com.distribuida.dao.FacturaDAO;
 import com.distribuida.dao.ClienteDAO;
 import com.distribuida.dao.LibroDAO;
 import com.distribuida.dao.DetalleFacturaDAO;
-import com.distribuida.entities.Cliente;
+
 import com.distribuida.entities.DetalleFactura;
 import com.distribuida.entities.Factura;
 import com.distribuida.entities.Libro;
@@ -21,7 +21,6 @@ public class PrincipalDetalleFactura {
 		
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ApplicationContext.xml");
 		DetalleFacturaDAO detallefacturaDAO =context.getBean("detallefacturaDAOImpl", DetalleFacturaDAO.class);
-		ClienteDAO clienteDAO =context.getBean("clienteDAOimpl", ClienteDAO.class);
 		FacturaDAO facturaDAO =context.getBean("facturaDAOimpl", FacturaDAO.class);
 		LibroDAO libroDAO =context.getBean("libroDAOimpl", LibroDAO.class);
 		
@@ -30,14 +29,14 @@ public class PrincipalDetalleFactura {
 		//ADD
 		Libro libro =libroDAO.findOne(1);
 		Factura factura =facturaDAO.findOne(1);
-		DetalleFactura detallefactura = new DetalleFactura (0, 3, 22.22,factura,libro);
+		DetalleFactura detallefactura = new DetalleFactura (0, 3, 22.22);
 		//detallefacturaDAO.add(detallefactura);
 		
 		
 //////////UP
 		Factura factura2 =facturaDAO.findOne(2);
 		Libro libro2 = libroDAO.findOne(2);
-		DetalleFactura detallefactura2 = new DetalleFactura (86, 3, 22.22,factura,libro);
+		DetalleFactura detallefactura2 = new DetalleFactura (86, 3, 22.22);
 		//detallefacturaDAO.up(detallefactura2);
 		
 		

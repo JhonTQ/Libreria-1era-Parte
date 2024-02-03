@@ -18,12 +18,12 @@ public class PrincipalCliente {
 		
 		
 		//add
-		Cliente cliente2 =new Cliente(0,"0102030405", "Jefferson2", "Gutierritos2","Quito","0987654321","jgutierritos@correo.com");
 		
-		//clienteService.add(cliente2);
+		clienteService.add(0,"01020304059090", "JeffersonGGG", "GutierritosSSSS","Quito","0987654321","jgutierritos@correo.com");
 		
-		Cliente cliente3 =new Cliente(42,"0102032233", "Pamela", "Gutierritos","Quito","0987651234","pgutierritos@correo.com");
-		//clienteService.up(cliente3);
+		
+		//UP
+		//clienteService.up(43,"01020304058", "Jefferson8", "Gutierritos8","Quito","0987654321","jgutierritos@correo.com");
 		
 		//clienteService.del(42);
 		

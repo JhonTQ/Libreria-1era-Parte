@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import com.distribuida.dto.CategoriaService;
 import com.distribuida.dao.CategoriaDAO;
 import com.distribuida.entities.Categoria;
 
@@ -49,6 +49,21 @@ public class CategoriaServiceImpl implements CategoriaService {
 	public List<Categoria> findAll(String busqueda) {
 		// TODO Auto-generated method stub
 		return categoriaDAO.findAll(busqueda);
+	}
+
+	public void add(int idCategoria, String categoria, String descripcion) {
+		// TODO Auto-generated method stub
+		
+		Categoria categoria1=new Categoria(idCategoria, categoria, descripcion);
+		categoriaDAO.add(categoria1);
+		
+	}
+
+	public void up(int idCategoria, String categoria, String descripcion) {
+		// TODO Auto-generated method stub
+		Categoria categoria1=new Categoria(idCategoria, categoria, descripcion);
+		categoriaDAO.up(categoria1);
+		
 	}
 
 }

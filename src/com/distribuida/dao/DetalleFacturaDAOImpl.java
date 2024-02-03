@@ -8,12 +8,13 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.distribuida.entities.Categoria;
 import com.distribuida.entities.DetalleFactura;
 import com.distribuida.entities.Factura;
-
-public class DetalleFacturaDAOImplo implements DetalleFacturaDAO {
+@Repository
+public class DetalleFacturaDAOImpl implements DetalleFacturaDAO {
 	
 	@Autowired
 	

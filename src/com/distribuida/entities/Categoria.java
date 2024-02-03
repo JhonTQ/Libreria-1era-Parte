@@ -29,7 +29,7 @@ public class Categoria {
 	
 
 	public Categoria(int idCategoria, String categoria, String descripcion) {
-		super();
+
 		this.idCategoria = idCategoria;
 		this.categoria = categoria;
 		this.descripcion = descripcion;

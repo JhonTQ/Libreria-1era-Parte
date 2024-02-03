@@ -13,5 +13,11 @@ public interface AutorService {
 	public void del(int id);
 	
 	public List<Autor> findAll(String busqueda);
+	
+	public void add(int idAutor, String nombre, String apellido, String pais, String direccion, String telefono,
+			String correo);
+	public void up(int idAutor, String nombre, String apellido, String pais, String direccion, String telefono,
+			String correo);
+	
 
 }
