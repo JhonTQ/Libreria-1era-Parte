@@ -20,39 +20,22 @@ public class PrincipalAutor {
 		
 		//ADD
 		
-		autorService.add(0, "Diego", "Maiquez", "Ecuador", "Tumbaco", "telefono1", "correo1");
+		autorService.add(0, "D", "M", "Ecuad", "Tumbaco", "telefono1", "correo1");
+		System.out.println(">>>>ADD>>>>>>" + autorService.findOne(71));
 		
 		//////////UP
 		
 	
-		//autorService.up(56, "nombre8", "apellido8", "pais8", "direccion2", "telefono2", "correo2");
-		
+		autorService.up(71, "nombre8", "apellido8", "pais8", "direccion2", "telefono2", "correo2");
+		System.out.println(">>>>UP>>>>>>" + autorService.findOne(71));
 		
 		//////////////DEL
 		
-		//autorDAO.del(57);
+		autorService.del(71);
 		try {
-			System.out.println(">>>>DEL>>>>>"+autorService.findOne(56));}catch(Exception e) {e.printStackTrace();}
+			System.out.println(">>>>DEL>>>>>"+autorService.findOne(71));}catch(Exception e) {e.printStackTrace();}
 		
-		//findAll
-			
-		List<Autor> autores = autorService.findAll();
-		
-		for (Autor item : autores) {
-			System.out.println(item.toString());
-		}
-		
-			
-		///////findOne
-		
-		//Autor autor = autorService.findOne(1);
-		//System.out.println(autor.toString());
-		
-		
-		/*List<Autor> autores2 = autorDAO.findAll("pam");
-		for(Autor autor3: autores2) {
-			System.out.println(autor3.toString());	
-		}*/
+		for (Autor item : autorService.findAll()) {System.out.println(item.toString());	}
 		
 		context.close();
 

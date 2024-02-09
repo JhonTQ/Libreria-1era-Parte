@@ -1,4 +1,4 @@
-	package com.distribuida.dto;
+package com.distribuida.dto;
 
 import java.util.List;
 
@@ -14,15 +14,17 @@ import com.distribuida.entities.Libro;
 
 @Service
 public class DetalleFacturaServiceImpl implements DetalleFacturaService {
-
-	@Autowired
 	
+	@Autowired
 	private DetalleFacturaDAO detallefacturaDAO;
+	
 	@Autowired
 	private FacturaDAO facturaDAO;
-	@Autowired
-	private LibroDAO libroDAO;
 	
+	@Autowired
+	
+	private LibroDAO libroDAO;
+
 	public List<DetalleFactura> findAll() {
 		// TODO Auto-generated method stub
 		return detallefacturaDAO.findAll();
@@ -33,6 +35,33 @@ public class DetalleFacturaServiceImpl implements DetalleFacturaService {
 		return detallefacturaDAO.findOne(id);
 	}
 
+	public void add(int idDetalleFactura, int cantidad, Double subTotal, int idFactura, int idLibro) {
+		// TODO Auto-generated method stub
+		
+		Factura factura=facturaDAO.findOne(idFactura);
+		Libro libro=libroDAO.findOne(idLibro);
+		
+		DetalleFactura detallefactura = new DetalleFactura(idDetalleFactura, cantidad , subTotal);
+		detallefactura.setFactura(factura);
+		detallefactura.setLibro(libro);
+		
+		detallefacturaDAO.add(detallefactura);
+
+	}
+
+	public void up(int idDetalleFactura, int cantidad, Double subTotal, int idFactura, int idLibro) {
+		// TODO Auto-generated method stub
+
+		Factura factura=facturaDAO.findOne(idFactura);
+		Libro libro=libroDAO.findOne(idLibro);
+		
+		DetalleFactura detallefactura = new DetalleFactura(idDetalleFactura, cantidad , subTotal);
+		detallefactura.setFactura(factura);
+		detallefactura.setLibro(libro);
+		
+		detallefacturaDAO.up(detallefactura);
+	}
+
 	public void del(int id) {
 		// TODO Auto-generated method stub
 		
@@ -40,38 +69,12 @@ public class DetalleFacturaServiceImpl implements DetalleFacturaService {
 
 	}
 
-	public void add(int idDetalleFactura, int cantidad, Double subTotal, int idFactura , int idLibro) {
-		// TODO Auto-generated method stub
-		
-		Factura factura =facturaDAO.findOne(idFactura);
-		Libro libro =libroDAO.findOne(idLibro);
-		
-		DetalleFactura detalleFactura = new DetalleFactura(idDetalleFactura,  cantidad,  subTotal);
-		detalleFactura.setFactura(factura);
-		detalleFactura.setLibro(libro);
-		detallefacturaDAO.add(detalleFactura);	
-	}
-	
-
-	public void up(int idDetalleFactura, int cantidad, Double subTotal, int idFactura , int idLibro) {
-		// TODO Auto-generated method stub
-		
-		Factura factura =facturaDAO.findOne(idFactura);
-		Libro libro =libroDAO.findOne(idLibro);
-		
-		DetalleFactura detalleFactura = new DetalleFactura(idDetalleFactura,  cantidad,  subTotal);
-		detalleFactura.setFactura(factura);
-		detalleFactura.setLibro(libro);
-		detallefacturaDAO.up(detalleFactura);
-		
-	}
-	
-	public void add(int idDetalleFactura, int cantidad, Double subTotal, Factura factura, Libro libro) {
+	public void add(DetalleFactura detallefactura) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public void up(int idDetalleFactura, int cantidad, Double subTotal, Factura factura, Libro libro) {
+	public void up(DetalleFactura detallefactura) {
 		// TODO Auto-generated method stub
 		
 	}

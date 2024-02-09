@@ -19,4 +19,6 @@ public interface DetalleFacturaDAO {
 	public List<DetalleFactura> findAll(String busqueda);
 	
 
+	public void add(int i, String string, String string2);
+	public void up(int i, String string, String string2);
 }

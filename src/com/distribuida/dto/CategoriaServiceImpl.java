@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.distribuida.dto.CategoriaService;
 import com.distribuida.dao.CategoriaDAO;
+import com.distribuida.entities.Autor;
 import com.distribuida.entities.Categoria;
 
 @Service
@@ -24,46 +25,33 @@ public class CategoriaServiceImpl implements CategoriaService {
 		// TODO Auto-generated method stub
 		return categoriaDAO.findOne(id);
 	}
-
-	public void add(Categoria categoria) {
-		// TODO Auto-generated method stub
-		
-		categoriaDAO.add(categoria);
-
-	}
-
-	public void up(Categoria categoria) {
-		// TODO Auto-generated method stub
-		
-		categoriaDAO.up(categoria);
-
-	}
-
-	public void del(int id) {
-		// TODO Auto-generated method stub
-		categoriaDAO.del(id);
-		
-
-	}
-
-	public List<Categoria> findAll(String busqueda) {
-		// TODO Auto-generated method stub
-		return categoriaDAO.findAll(busqueda);
-	}
-
+	
+	
 	public void add(int idCategoria, String categoria, String descripcion) {
 		// TODO Auto-generated method stub
 		
 		Categoria categoria1=new Categoria(idCategoria, categoria, descripcion);
-		categoriaDAO.add(categoria1);
+		//categoriaDAO.add(categoria1);
 		
-	}
+	
 
+	}
 	public void up(int idCategoria, String categoria, String descripcion) {
 		// TODO Auto-generated method stub
 		Categoria categoria1=new Categoria(idCategoria, categoria, descripcion);
-		categoriaDAO.up(categoria1);
+		//categoriaDAO.up(categoria1);
 		
+	}
+	
+	public void del(int id) {
+		// TODO Auto-generated method stub
+		
+		//categoriaDAO.del(id);
+
+	}
+	public List<Categoria> findAll(String busqueda) {
+		// TODO Auto-generated method stub
+		return categoriaDAO.findAll(busqueda);
 	}
 
 }

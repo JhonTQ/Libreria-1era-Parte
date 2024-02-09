@@ -22,6 +22,5 @@ public interface CategoriaDAO {
 	
 	public List<Categoria> findAll(String busqueda);
 
-	public void add(int idCategoria, String categoria, String descripcion);
-	public void up(int idCategoria, String categoria, String descripcion);
+	
 }

@@ -10,9 +10,9 @@ import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.distribuida.entities.Categoria;
+
 import com.distribuida.entities.DetalleFactura;
-import com.distribuida.entities.Factura;
+
 @Repository
 public class DetalleFacturaDAOImpl implements DetalleFacturaDAO {
 	
@@ -64,6 +64,16 @@ public class DetalleFacturaDAOImpl implements DetalleFacturaDAO {
 	public List<DetalleFactura> findAll(String busqueda) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public void add(int i, String string, String string2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void up(int i, String string, String string2) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

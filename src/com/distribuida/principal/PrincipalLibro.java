@@ -36,7 +36,7 @@ public class PrincipalLibro {
 				Categoria categoria2 =categoriaDAO.findOne(2);
 				Autor autores2 =autorDAO.findOne(2);
 				Libro libro2 = new Libro (80,"Pinocho","mieles",200,"2th","español",new Date(),"cuento","pasta blanda","768-123456789","5","portada","infantil", 40.22);
-				//libroDAO.up(libro2);
+				libroDAO.up(libro2);
 				
 				//BORRADO
 				//libroDAO.del(81);

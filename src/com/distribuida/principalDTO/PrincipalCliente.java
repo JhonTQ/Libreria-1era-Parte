@@ -1,5 +1,4 @@
 package com.distribuida.principalDTO;
-
 import java.util.List;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -12,38 +11,32 @@ public class PrincipalCliente {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ApplicationContext.xml");
+		ClassPathXmlApplicationContext context =new ClassPathXmlApplicationContext("ApplicationContext.xml");
 		
-		ClienteService clienteService =context.getBean("clienteServiceImpl", ClienteService.class);
+		ClienteService clienteService=context.getBean("clienteServiceImpl", ClienteService.class);
 		
+		//CRUD
 		
-		//add
+		//ADD
 		
-		clienteService.add(0,"01020304059090", "JeffersonGGG", "GutierritosSSSS","Quito","0987654321","jgutierritos@correo.com");
+		clienteService.add(0, "cedula1", "nombre1", "apellido1", "direccion1", "telefono1", "correo1");
+		System.out.println(">>>>ADD>>>>>>" + clienteService.findOne(50));
 		
+		//////////UP
 		
-		//UP
-		//clienteService.up(43,"01020304058", "Jefferson8", "Gutierritos8","Quito","0987654321","jgutierritos@correo.com");
+	
+		clienteService.up(50, "cedula1", "nombre1", "apellido1", "direccion1", "telefono1", "correo1");
+		System.out.println(">>>>UP>>>>>>" + clienteService.findOne(50));
 		
-		//clienteService.del(42);
+		//////////////DEL
 		
+		clienteService.del(50);
+		try {
+			System.out.println(">>>>DEL>>>>>"+clienteService.findOne(50));}catch(Exception e) {e.printStackTrace();}
 		
-		//FindAll
+		for (Cliente item : clienteService.findAll()) {System.out.println(item.toString());	}
 		
-		List<Cliente> clientes =clienteService.findAll();
-		
-		for (Cliente item : clientes) {
-			
-			System.out.println(item.toString());
-		}
-		
-		//findOne
-		
-		//Cliente cliente = clienteService.findOne(1);
-		
-		//System.out.println(cliente.toString());
-		
-		context .close();
+		context.close();
 
 	}
 	

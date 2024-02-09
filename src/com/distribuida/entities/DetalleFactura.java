@@ -18,7 +18,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Entity
-@Table(name="detalle_factura")
+@Table(name="factura_detalle")
 public class DetalleFactura {
 	
 	@Id

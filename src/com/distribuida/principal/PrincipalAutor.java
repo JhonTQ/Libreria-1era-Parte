@@ -5,7 +5,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.distribuida.dao.AutorDAO;
 import com.distribuida.entities.Autor;
-import com.distribuida.entities.Categoria;
 
 public class PrincipalAutor {
 

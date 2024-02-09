@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.distribuida.dao.AutorDAO;
 import com.distribuida.entities.Autor;
-import com.distribuida.entities.Categoria;
 
 @Service
 public class AutorServiceImpl implements AutorService {
@@ -26,7 +25,7 @@ public class AutorServiceImpl implements AutorService {
 	public Autor findOne(int id) {
 		// TODO Auto-generated method stub
 		return autorDAO.findOne(id);
-	}
+	}		
 
 	public void add(Autor autor) {
 		// TODO Auto-generated method stub

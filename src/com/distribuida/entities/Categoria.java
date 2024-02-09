@@ -62,9 +62,9 @@ public class Categoria {
 	}
 
 	public String toString() {
-		return "Categoria [idCategoria=" + idCategoria + ", categoria=" + categoria + ", descripcion=" + descripcion
-				+ "]";
+		return "Categoria [idCategoria=" + idCategoria + ", categoria=" + categoria + ", descripcion=" + descripcion + "]";
 	}
-	
-	
 }
+	
+	
+
